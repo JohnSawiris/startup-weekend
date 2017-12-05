@@ -1,0 +1,4 @@
+@mixin centerContent($width, $marginTop: 0, $marginBottom: 0) {
+  width: $width;
+  margin: $marginTop auto $marginBottom;
+}
