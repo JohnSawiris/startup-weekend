@@ -2,11 +2,17 @@
 @import "base/typography";
 
 // COLORS
-$primary-color: #0db14b;
+$green-color: #0db14b;
+$gray-color: #f4f4f4;
 $white-color: #fff;
 
-// FONT FAMILIES
-$header-font: 'Kanit', sans-serif;
+//DARKER COLORS
+$dark-green-color: darken($green-color, 5%);
 
+
+
+// FONT FAMILIES
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Open Sans', sans-serif;
 //font size
 $font-size: 14px;

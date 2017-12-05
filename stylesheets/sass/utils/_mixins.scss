@@ -2,3 +2,7 @@
   width: $width;
   margin: $marginTop auto $marginBottom;
 }
+
+@mixin padding($top, $right, $bottom, $left) {
+  padding: $top $right $bottom $left;
+}
