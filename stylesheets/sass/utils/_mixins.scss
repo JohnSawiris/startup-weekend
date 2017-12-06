@@ -1,8 +1,27 @@
+@import "utils/variables";
+
 @mixin centerContent($width, $marginTop: 0, $marginBottom: 0) {
   width: $width;
   margin: $marginTop auto $marginBottom;
 }
 
-@mixin padding($top, $right, $bottom, $left) {
-  padding: $top $right $bottom $left;
+@mixin circle($height, $width, $bg-color){
+  border-radius: 50%;
+  height: $height;
+  width: $width;
+  background-color: $bg-color;
+}
+
+@mixin tablet() {
+  @media screen and (min-width: $tablet){
+    @for $space from 1 through 12 {
+      $width: 100% / 12 * $space;
+
+      .col-md-#{$space} {
+        width: $width - 2;
+        flex-basis: $width - 2;
+      }
+    }
+    @content;
+  }
 }

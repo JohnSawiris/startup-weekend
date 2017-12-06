@@ -1,16 +1,19 @@
 @import "components/buttons";
 
-.nav-logo {
-  display: inline-block;
-  height: 50px;
-  width: 50%;
-  padding: 1em 1em .5em;
-}
-
-.logo {
-  display: inline-block;
-  background: url(../../img/logo.svg) no-repeat;
-  width: 240px;
-  height: 100%;
-  background-size: 240px 40px;
+.navbar {
+  width: 100%;
+  display: block;
+  .nav-logo {
+    display: inline-block;
+    height: 50px;
+    width: 50%;
+    padding: .25em 1em 0;
+    .logo {
+      display: inline-block;
+      background: url(../../img/logo.svg) no-repeat;
+      width: 240px;
+      height: 100%;
+      background-size: 240px 50px;
+    }
+  }
 }

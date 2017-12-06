@@ -6,10 +6,14 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans:300,400,600");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans:300,400,600");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans:300,400,600");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900|Open+Sans:300,400,600,800");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900|Open+Sans:300,400,600,800");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900|Open+Sans:300,400,600,800");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900|Open+Sans:300,400,600,800");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900|Open+Sans:300,400,600,800");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900|Open+Sans:300,400,600,800");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900|Open+Sans:300,400,600,800");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900|Open+Sans:300,400,600,800");
 html {
   line-height: 1.15;
   /* 1 */
@@ -439,16 +443,15 @@ template {
 .nav-btn {
   display: inline-block;
   height: 40px;
-  width: 24px;
+  width: 23px;
   position: relative;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
   cursor: pointer;
   float: right;
-  margin: 33px 30px 0;
+  margin: 33px 23px 0;
 }
-
-.nav-btn > span {
+.nav-btn span {
   display: block;
   position: absolute;
   height: 2px;
@@ -459,55 +462,50 @@ template {
   left: 0;
   transition: 0.25s ease-in-out;
 }
-
 .nav-btn span:nth-child(1) {
   top: 0;
 }
-
+.nav-btn span:nth-child(2) {
+  top: 6px;
+}
+.nav-btn span:nth-child(3) {
+  top: 12px;
+}
 .nav-btn.click span:nth-child(1) {
   top: 6px;
   transform: rotate(135deg);
 }
-
-.nav-btn span:nth-child(2) {
-  top: 6px;
-}
-
 .nav-btn.click span:nth-child(2) {
   opacity: 0;
   left: -24px;
 }
-
-.nav-btn span:nth-child(3) {
-  top: 12px;
-}
-
 .nav-btn.click span:nth-child(3) {
   top: 6px;
   transform: rotate(-135deg);
 }
 
 .form .btn {
-  padding: 1.3em 1.3em 1.3em 1.3em;
+  padding: 1.3em;
   border-radius: 6px;
   background-color: #fff;
   color: #0db14b;
   margin-left: 1em;
   font-weight: bold;
   outline: 0;
+  transition: .25s ease-in-out;
 }
 .form .btn:focus, .form .btn:active, .form .btn:visited {
   outline: 0;
 }
 .form .btn:hover {
-  background-color: #0b9941;
+  background-color: #0ca747;
   color: #fff;
-  border: 2px solid #0b9941;
+  border: 1px solid #0ca747;
 }
 
-.event-form {
+.form {
   background-color: #0db14b;
-  padding: 1.5em 0 2em 0;
+  padding: 1.5em 0 2em;
   text-align: center;
   color: #fff;
   font-family: "Montserrat", sans-serif;
@@ -518,25 +516,100 @@ template {
   color: #fff;
   border: 2px solid #fff;
   background-color: transparent;
-  padding: 1em 1em 1em 1em;
+  padding: 1em;
   width: 60%;
   font-weight: 400;
   font-size: 19.6px;
 }
 
+.row {
+  width: 100%;
+  margin: 1em auto 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+[class*='col'] {
+  margin: 1%;
+}
+
+.col-1 {
+  width: 6.33333%;
+  flex-basis: 6.33333%;
+}
+
+.col-2 {
+  width: 14.66667%;
+  flex-basis: 14.66667%;
+}
+
+.col-3 {
+  width: 23%;
+  flex-basis: 23%;
+}
+
+.col-4 {
+  width: 31.33333%;
+  flex-basis: 31.33333%;
+}
+
+.col-5 {
+  width: 39.66667%;
+  flex-basis: 39.66667%;
+}
+
+.col-6 {
+  width: 48%;
+  flex-basis: 48%;
+}
+
+.col-7 {
+  width: 56.33333%;
+  flex-basis: 56.33333%;
+}
+
+.col-8 {
+  width: 64.66667%;
+  flex-basis: 64.66667%;
+}
+
+.col-9 {
+  width: 73%;
+  flex-basis: 73%;
+}
+
+.col-10 {
+  width: 81.33333%;
+  flex-basis: 81.33333%;
+}
+
+.col-11 {
+  width: 89.66667%;
+  flex-basis: 89.66667%;
+}
+
+.col-12 {
+  width: 98%;
+  flex-basis: 98%;
+}
+
+.card {
+  background-color: #fff;
+  color: #414141;
+}
+
 .nav-btn {
   display: inline-block;
   height: 40px;
-  width: 24px;
+  width: 23px;
   position: relative;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
   cursor: pointer;
   float: right;
-  margin: 33px 30px 0;
+  margin: 33px 23px 0;
 }
-
-.nav-btn > span {
+.nav-btn span {
   display: block;
   position: absolute;
   height: 2px;
@@ -547,86 +620,105 @@ template {
   left: 0;
   transition: 0.25s ease-in-out;
 }
-
 .nav-btn span:nth-child(1) {
   top: 0;
 }
-
+.nav-btn span:nth-child(2) {
+  top: 6px;
+}
+.nav-btn span:nth-child(3) {
+  top: 12px;
+}
 .nav-btn.click span:nth-child(1) {
   top: 6px;
   transform: rotate(135deg);
 }
-
-.nav-btn span:nth-child(2) {
-  top: 6px;
-}
-
 .nav-btn.click span:nth-child(2) {
   opacity: 0;
   left: -24px;
 }
-
-.nav-btn span:nth-child(3) {
-  top: 12px;
-}
-
 .nav-btn.click span:nth-child(3) {
   top: 6px;
   transform: rotate(-135deg);
 }
 
 .form .btn {
-  padding: 1.3em 1.3em 1.3em 1.3em;
+  padding: 1.3em;
   border-radius: 6px;
   background-color: #fff;
   color: #0db14b;
   margin-left: 1em;
   font-weight: bold;
   outline: 0;
+  transition: .25s ease-in-out;
 }
 .form .btn:focus, .form .btn:active, .form .btn:visited {
   outline: 0;
 }
 .form .btn:hover {
-  background-color: #0b9941;
+  background-color: #0ca747;
   color: #fff;
-  border: 2px solid #0b9941;
+  border: 1px solid #0ca747;
 }
 
-.nav-logo {
+.navbar {
+  width: 100%;
+  display: block;
+}
+.navbar .nav-logo {
   display: inline-block;
   height: 50px;
   width: 50%;
-  padding: 1em 1em .5em;
+  padding: .25em 1em 0;
 }
-
-.logo {
+.navbar .nav-logo .logo {
   display: inline-block;
   background: url(../../img/logo.svg) no-repeat;
   width: 240px;
   height: 100%;
-  background-size: 240px 40px;
+  background-size: 240px 50px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+body h1::selection,
+body h2::selection,
+body h3::selection,
+body p::selection {
+  background-color: #0db14b;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container-fluid {
+  width: 100%;
+  margin: 1em auto 0;
 }
 
 .container {
-  width: 90%;
-  margin: 0 auto 0;
+  width: 85%;
+  margin: 1em auto 0;
 }
 
 .hero {
   background: url("../../img/hero.png") no-repeat;
-  padding: 1em 1em 3em 1em;
+  padding: 1em 1em 3em;
   background-position: 50% 0%;
   background-size: 225% 100%;
-  font-family: "Montserrat", sans-serif;
   font-size: 16.8px;
-  color: #fff;
 }
-
 .hero h1 {
   font-weight: 600;
 }
-
 .hero p {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -643,12 +735,152 @@ template {
 .location {
   margin-top: 1em;
 }
-
 .location a {
   color: #fff;
   font-size: 18.2px;
   font-weight: 300;
   text-decoration: none;
+}
+
+.intro {
+  background-color: #f4f4f4;
+  padding: 3em 0 3em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 27px;
+}
+.intro h2 {
+  color: #414141;
+  margin: 0;
+}
+.intro p {
+  color: #808080;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.row {
+  align-items: stretch;
+}
+
+.card {
+  margin-top: 70px;
+}
+
+.content {
+  padding: 3em 1em 1em;
+  position: relative;
+}
+.content p {
+  font-size: 16px;
+  color: #000;
+  font-weight: 300;
+}
+
+.icon {
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  background-color: #0db14b;
+  position: absolute;
+  bottom: 87%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.icon i {
+  font-size: 50px;
+  padding-top: 0.3em;
+  color: #fff;
+}
+
+.stats h2 {
+  color: #414141;
+  text-align: center;
+  font-size: 30px;
+}
+
+.number h1 {
+  color: #0db14b;
+  font-size: 50px;
+  margin: 0;
+}
+.number p {
+  color: #000;
+  margin: 0;
+  font-size: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .col-md-1 {
+    width: 6.33333%;
+    flex-basis: 6.33333%;
+  }
+
+  .col-md-2 {
+    width: 14.66667%;
+    flex-basis: 14.66667%;
+  }
+
+  .col-md-3 {
+    width: 23%;
+    flex-basis: 23%;
+  }
+
+  .col-md-4 {
+    width: 31.33333%;
+    flex-basis: 31.33333%;
+  }
+
+  .col-md-5 {
+    width: 39.66667%;
+    flex-basis: 39.66667%;
+  }
+
+  .col-md-6 {
+    width: 48%;
+    flex-basis: 48%;
+  }
+
+  .col-md-7 {
+    width: 56.33333%;
+    flex-basis: 56.33333%;
+  }
+
+  .col-md-8 {
+    width: 64.66667%;
+    flex-basis: 64.66667%;
+  }
+
+  .col-md-9 {
+    width: 73%;
+    flex-basis: 73%;
+  }
+
+  .col-md-10 {
+    width: 81.33333%;
+    flex-basis: 81.33333%;
+  }
+
+  .col-md-11 {
+    width: 89.66667%;
+    flex-basis: 89.66667%;
+  }
+
+  .col-md-12 {
+    width: 98%;
+    flex-basis: 98%;
+  }
+
+  .hero {
+    padding: 4.5em 1em 3em;
+    text-align: center;
+    font-size: 28px;
+    background-size: 161% 100%;
+  }
+  .hero p {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

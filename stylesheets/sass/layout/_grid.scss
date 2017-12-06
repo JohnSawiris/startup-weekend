@@ -1,0 +1,23 @@
+.row {
+  @include centerContent(100%, 1em);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+[class*='col'] {
+  margin: 1%;
+}
+
+@for $space from 1 through 12 {
+  $width: 100% / 12 * $space;
+
+  .col-#{$space} {
+    width: $width - 2;
+    flex-basis: $width - 2;
+  }
+}
+
+.card {
+  background-color: $white-color;
+  color: $dark-gray-color;
+}

@@ -10,31 +10,55 @@
 @import "utils/placeholders";
 @import "utils/variables";
 
-.container {
-  @include centerContent(90%);
+* {
+  box-sizing: border-box;
 }
 
+body {
+  color: $white-color;
+  font-family: $primary-font;
+   h1::selection,
+   h2::selection,
+   h3::selection,
+   p::selection {
+     background-color: $green-color;
+     color: $white-color;
+    }
+}
+
+img {
+  max-width: 100%;
+}
+
+
+
+.container-fluid {
+  @include centerContent(100%, 1em);
+}
+.container {
+  @include centerContent(85%, 1em);
+}
+
+
+//Hero section
 .hero {
   background: url("../../img/hero.png") no-repeat;
-  @include padding(1em, 1em, 3em, 1em);
+  padding: 1em 1em 3em;
   background-position: 50% 0%;
   background-size: 225% 100%;
-  font-family: $primary-font;
   font-size: $font-size * 1.2;
-  color: $white-color;
+  h1 {
+    font-weight: 600;
+  }
+  p {
+   font-family: $secondary-font;
+   font-weight: 400;
+   line-height: $font-size + 9;
+   font-size: $font-size + 2;
+ }
 }
 
-.hero h1 {
-  font-weight: 600;
-}
-
-.hero p {
-  font-family: $secondary-font;
-  font-weight: 400;
-  line-height: $font-size + 9;
-  font-size: $font-size + 2;
-}
-
+//Event section
 .event-form h3 {
   margin-top: 0;
   font-weight: 300;
@@ -43,11 +67,94 @@
 
 .location {
   margin-top: 1em;
+  a {
+    color: $white-color;
+    font-size: $font-size * 1.3;
+    font-weight: 300;
+    text-decoration: none;
+  }
 }
 
-.location a {
-  color: $white-color;
-  font-size: $font-size * 1.3;
-  font-weight: 300;
-  text-decoration: none;
+//Intro Section
+.intro {
+  background-color: $gray-color;
+  padding: 3em 0 3em;
+  font-weight: bold;
+  text-align: center;
+  line-height: $font-size + 13;
+  h2 {
+    color: $dark-gray-color;
+    margin: 0;
+  }
+  p {
+    color: $light-gray-color;
+    font-family: $secondary-font;
+    font-weight: 400;
+  }
+}
+
+.row {
+  align-items: stretch;
+}
+
+.card {
+  margin-top: 70px;
+}
+
+.content {
+  padding: 3em 1em 1em;
+  position: relative;
+  p {
+    font-size: $font-size + 2;
+    color: #000;
+    font-weight: 300;
+  }
+}
+
+.icon {
+  @include circle(80px, 80px, $green-color);
+  position: absolute;
+  bottom: 87%;
+  left: 50%;
+  transform: translateX(-50%);
+  i {
+    font-size: 50px;
+    padding-top: 0.3em;
+    color: $white-color;
+  }
+}
+
+// STATS SECTION
+.stats {
+  h2 {
+    color: $dark-gray-color;
+    text-align: center;
+    font-size: $font-size + 16;
+  }
+}
+
+.number {
+  h1 {
+    color: $green-color;
+    font-size: $font-size + 36;
+    margin: 0;
+  }
+  p {
+    color: #000;
+    margin: 0;
+    font-size: $font-size + 1;
+  }
+}
+
+@include tablet {
+  .hero {
+    padding: 4.5em 1em 3em;
+    text-align:center;
+    font-size: $font-size * 2;
+    background-size: 161% 100%;
+    p {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
 }
